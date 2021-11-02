@@ -1,0 +1,101 @@
+
+.anim {
+    position: relative;
+  }
+  /*===================================*/
+  /*PACMAN*/
+  /*===================================*/
+  .pacman {
+    position: relative;
+  }
+  .body_top {
+    width: 140px;
+    height: 70px;
+    border-radius:100px 100px 0 0;
+    background: #dbb200;
+    animation: body_top 0.5s infinite linear;
+  }
+  
+  .body_bottom {
+    width: 140px;
+    height: 70px;
+    border-radius: 0 0 100px 100px;
+    background: #dbb200;
+    animation: body_bottom 0.5s infinite linear;
+  }
+  
+  @keyframes body_top {
+    0%  {transform: rotate(0deg);}
+    50%{transform: rotate(-35deg);}
+  
+  }
+  @keyframes body_bottom {
+    0%  {transform: rotate(0deg);}
+    50%{transform: rotate(35deg);}
+  }
+  
+  .pacman .eyes {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: black;
+    /* right: 60px; */
+    left: 90px;
+    top: 16px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+  }
+  
+  .pacman .eyes .iris {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+  
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+  
+    top: 5px;
+    right: 2px;
+  
+  }
+  
+  /*===================================*/
+  /*FOOD*/
+  /*===================================*/
+  .dot {
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    /*background: white;*/
+    z-index: -1;
+    animation: dotmove 1s linear 0s infinite;
+  }
+
+
+  @keyframes dotmove {
+	0% { box-shadow:
+      100px 65px 0 0 white,
+      300px 65px 0 0 white,
+      500px 65px 0 0 white,
+      700px 65px 0 0 white,
+      900px 65px 0 0 white,
+      1100px 65px 0 0 white,
+      1300px 65px 0 0 white;}
+
+100% { box-shadow:
+      0px 65px 0 0 white,
+      100px 65px 0 0 white,
+      300px 65px 0 0 white,
+      500px 65px 0 0 white,
+      700px 65px 0 0 white,
+      900px 65px 0 0 white,
+      1100px 65px 0 0 white;}
+}
